@@ -133,6 +133,7 @@ if (date('Ymd') > datasomadias($dtinstall, 5)) {
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -143,10 +144,14 @@ if (date('Ymd') > datasomadias($dtinstall, 5)) {
     <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
 
     <!-- bootstrap js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 
     <!-- bootstrap css -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css"
+          rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 
     <!-- jquery js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -208,14 +213,18 @@ if (date('Ymd') > datasomadias($dtinstall, 5)) {
     include('navbar.php')
     ?>
 
-    <div id="main-body">
-        <?php
-        if (strlen($ap) > 0) {
-            include($ap);
-        } else {
-            include($fdash);
-        }
-        ?>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 p-3 my-3 bg-light" id="main-body">
+            <?php
+            if (strlen($ap) > 0) {
+                include($ap);
+            } else {
+                include($fdash);
+            }
+            ?>
+        </div>
+        <div class="col-md-1"></div>
     </div>
     <footer class="main-footer">
         <?php

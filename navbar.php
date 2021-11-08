@@ -38,20 +38,22 @@ include('header.php')
                     <a class="nav-link" href="#" onclick="$('#main-body').load('relatorio.php');return false;">Relatório</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Base de dados</a>
+                    <a class="nav-link" href="#" onclick="$('#main-body').load('baseDados.php');return false;">Base de dados</a>
                 </li>
                 <!-- Authentication Links -->
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        Olá
+                        Olá, <b>Admin</b>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            Logout
+                        <a class="dropdown-item" href="#"
+                           onclick="$('#main-body').load('config.php');return false;">
+                            <i class="fas fa-tools"></i> Configurações
+                        </a>
+                        <a class="dropdown-item" href="exit.php">
+                            <i class="fas fa-sign-out-alt"></i> Sair do sistema
                         </a>
                     </div>
                 </li>

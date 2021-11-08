@@ -23,7 +23,7 @@ $fphp = $ap.".php";
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item active">Carregar arquivo XML</li>
+              <li class="breadcrumb-item active">XML CNES</li>
             </ol>
           </div>
         </div>
@@ -40,7 +40,7 @@ $fphp = $ap.".php";
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
+                <div class="card-header" style="background-color: #0c5460; color: white">
                 <h3 class="card-title">Upload do arquivo XML</h3>
               </div>
               <!-- /.card-header -->

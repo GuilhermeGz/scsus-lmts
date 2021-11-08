@@ -134,6 +134,7 @@ if (file_exists("config/banco_" . $_SESSION['key'] . ".php")) {
                                     <p>Indicadores 1, 2 e 3</p>
                                 </a>
                             </li>
+
                             <li class="nav-item">
                                 <a href="#"
                                    onclick="$('#main-body').load('frm_filtro.php?ap=rel_gestantes');return false;"
@@ -213,6 +214,7 @@ if (file_exists("config/banco_" . $_SESSION['key'] . ".php")) {
                                 <a href="#"
                                    onclick="$('#main-body').load('frm_filtro.php?ap=rel_mulheres');return false;"
                                    class="nav-link">
+                                    <i class="fas fa-filter nav-icon"></i>
                                     <i class="fas fa-filter nav-icon"></i>
                                     <p>Filtro</p>
                                 </a>

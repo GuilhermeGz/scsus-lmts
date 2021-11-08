@@ -50,10 +50,10 @@ if (file_exists("config/c_rel_v_".$_SESSION['key'].".php")){
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Vacinas</h1>
+          <div class="col-sm-8">
+              <h1>Dados para geração dos relatórios</h1>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item active">Vacinas</li>
             </ol>
@@ -70,8 +70,8 @@ if (file_exists("config/c_rel_v_".$_SESSION['key'].".php")){
           <div class="col-md-6">
             <!-- jquery validation -->
             <div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">Crianças <small>- dados para geração dos relatórios</small></h3>
+                <div class="card-header" style="background-color: #0c5460; color: white">
+                <h3 class="card-title">Crianças</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -151,8 +151,8 @@ if (file_exists("config/c_rel_v_".$_SESSION['key'].".php")){
                 </div>
             </div>
             <!-- /.card -->
-            <div class="card card-warning">
-              <div class="card-header">
+            <div class="card card-warning mt-2">
+                <div class="card-header" style="background-color: #0c5460; color: white">
                 <h3 class="card-title">Vacinas</h3>
               </div>
               <!-- /.card-header -->
@@ -197,7 +197,7 @@ if (file_exists("config/c_rel_v_".$_SESSION['key'].".php")){
           <div class="col-md-6">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
+                <div class="card-header" style="background-color: #0c5460; color: white">
                 <h3 class="card-title">Geral</h3>
               </div>
               <!-- /.card-header -->

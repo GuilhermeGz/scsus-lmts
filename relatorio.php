@@ -1,4 +1,9 @@
 <?php
+require_once('session.php');
+$gestante = "html/rel_gestantes_" . $_SESSION['key'] . ".html";
+$mulheres = "html/rel_mulheres_" . $_SESSION['key'] . ".html";
+$mulheres_exame = "html/rel_mexame_" . $_SESSION['key'] . ".html";
+$vacinas = "html/rel_criancas_" . $_SESSION['key'] . ".html";
 ?>
 <style>
     .center {
@@ -10,55 +15,109 @@
         color: grey;
     }
 </style>
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8 shadow p-3 mb-5 bg-white rounded" style="margin-top: 4%;">
-        <div class="row">
-            <div class="col-sm-6">
-                <span style="text-align: left; color: #04467c; font-family: Arial; font-weight: bold; font-size: 24px">Relatórios</span>
-            </div>
-            <div class="col-sm-6">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                        style="float: right; color: white; background-color: #ff555b; margin-right: 1%;">Gerar Relátorio
-                </button>
-            </div>
+<div class="shadow p-3 mb-2 bg-white rounded">
+    <div class="row">
+        <div class="col-sm-6">
+            <span style="text-align: left; color: #04467c; font-family: Arial; font-weight: bold; font-size: 24px">Relatórios</span>
         </div>
+        <div class="col-sm-6">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                    style="float: right; color: white; background-color: #ff555b; margin-right: 1%;">Gerar Relátorio
+            </button>
+        </div>
+    </div>
 
-        <hr width="99%">
-        <div class="row">
-            <table class="table center shadow-sm p-3 mb-5 bg-white rounded" style="width: 96%;">
-                <thead class="shadow p-3 mb-5 bg-white rounded">
-                <tr style="">
-                    <th scope="col">Relatório</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Ação</th>
-                </tr>
-                </thead>
-                <tbody>
+    <hr width="99%">
+    <div class="row">
+        <table class="table center shadow-sm p-3 mb-5 bg-white rounded" style="width: 96%;">
+            <thead class="shadow p-3 mb-5 bg-white rounded">
+            <tr style="">
+                <th scope="col" style="width: 15%">Tipo</th>
+                <th scope="col" style="width: 50%">Relatório</th>
+                <th scope="col" style="width: 15%">Data</th>
+                <th scope="col" style="width: 20%">Ação</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Dashboard</td>
+                <td>Indicador Geral</td>
+                <td>04/10/2021</td>
+                <td><a href="#" onclick="$('#main-body').load('dash_ind.php');return false;"
+                       class="nav-link">
+                        <i class="fas fa-chart-bar nav-icon"></i>
+                    </a></td>
+            </tr>
+            <tr>
+                <td>Dashboard</td>
+                <td>Indicador da Equipe</td>
+                <td>04/10/2021</td>
+                <td><a href="#" onclick="$('#main-body').load('dash_equ.php');return false;"
+                       class="nav-link">
+                        <i class="fas fa-chart-bar nav-icon"></i>
+                    </a></td>
+            </tr>
+            <tr>
+                <td>Dashboard</td>
+                <td>Indicador da Equipe</td>
+                <td>04/10/2021</td>
+                <td><a href="#" onclick="$('#main-body').load('dash_uni.php');return false;"
+                       class="nav-link">
+                        <i class="fas fa-chart-bar nav-icon"></i>
+                    </a></td>
+            </tr>
+            <?php if (file_exists($gestante)): ?>
                 <tr>
-                    <td>Indicador Geral</td>
+                    <td>Gestante</td>
+                    <td>Indicadores 1, 2 e 3</td>
                     <td>04/10/2021</td>
-                    <td><a href="#" onclick="$('#main-body').load('dash_ind.php');return false;"
+                    <td><a href="#" onclick="$('#main-body').load('ver.php?ap=rel_gestantes');return false;"
                            class="nav-link">
                             <i class="fas fa-chart-bar nav-icon"></i>
                         </a></td>
                 </tr>
+            <?php endif; ?>
+
+            <?php if (file_exists($mulheres)): ?>
                 <tr>
-                    <td></td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>Mulheres</td>
+                    <td>Indicador 4</td>
+                    <td>04/10/2021</td>
+                    <td><a href="#" onclick="$('#main-body').load('ver.php?ap=rel_mulheres');return false;"
+                           class="nav-link">
+                            <i class="fas fa-chart-bar nav-icon"></i>
+                        </a></td>
                 </tr>
+            <?php endif; ?>
+
+            <?php if (file_exists($mulheres_exame)): ?>
                 <tr>
-                    <td></td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+                    <td>Mulheres</td>
+                    <td>Exames</td>
+                    <td>04/10/2021</td>
+                    <td><a href="#" onclick="$('#main-body').load('ver.php?ap=rel_mexames');return false;"
+                           class="nav-link">
+                            <i class="fas fa-chart-bar nav-icon"></i>
+                        </a></td>
                 </tr>
-                </tbody>
-            </table>
-        </div>
+            <?php endif; ?>
+
+            <?php if (file_exists($vacinas)): ?>
+                <tr>
+                    <td>Vacinas</td>
+                    <td>Indicador 5</td>
+                    <td>04/10/2021</td>
+                    <td><a href="#" onclick="$('#main-body').load('ver.php?ap=rel_criancas');return false;"
+                           class="nav-link">
+                            <i class="fas fa-chart-bar nav-icon"></i>
+                        </a></td>
+                </tr>
+            <?php endif; ?>
+            </tbody>
+        </table>
     </div>
-    <div class="col-md-2"></div>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -94,7 +153,8 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <select class="form-select" aria-label="Default select example" style="height: 35px">
+                                <select class="form-select" id="quadrimestre" aria-label="Default select example"
+                                        style="height: 35px">
                                     <option selected disabled hidden>Selecione o quadrimestre
                                     </option>
                                     <option value="1">Janeiro à Abril</option>
@@ -109,18 +169,18 @@
                         </div>
 
                         <div class="form-check" style="margin: 3%">
-                            <input class="form-check-input" type="checkbox" id="quadrAno" name="quadrAno">
-                            <label class="form-check-label" for="quadrAno">
+                            <input class="form-check-input" type="checkbox" id="inicioFim" name="inicioFim">
+                            <label class="form-check-label" for="inicioFim">
                                 Início e fim
                             </label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="date" class="form-control" name="dataInicio"
+                                <input type="date" class="form-control" id="dataInicio" name="dataInicio"
                                        placeholder="Digite a data do início">
                             </div>
                             <div class="col-sm-6">
-                                <input type="date" class="form-control" name="dataFim"
+                                <input type="date" class="form-control" id="dataFim" name="dataFim"
                                        placeholder="Digite a data do fim">
                             </div>
                         </div>
@@ -282,6 +342,53 @@
         minViewMode: "years",
         autoclose: true //to close picker once year is selected
     });
+</script>
+
+<script>
+
+    $('#quadrAno').change(function () {
+        if ($('#quadrAno').is(':checked') == true) {
+            $('#inicioFim').prop('disabled', true);
+            $('#dataInicio').prop('disabled', true);
+            $('#dataFim').prop('disabled', true);
+        } else {
+            $('#inicioFim').prop('disabled', false);
+            $('#dataInicio').prop('disabled', false);
+            $('#dataFim').prop('disabled', false);
+        }
+    });
+
+    $('#inicioFim').change(function () {
+        if ($('#inicioFim').is(':checked') == true) {
+            $('#quadrAno').prop('disabled', true);
+            $('#quadrimestre').prop('disabled', true);
+            $('#datepicker').prop('disabled', true);
+        } else {
+            $('#quadrAno').prop('disabled', false);
+            $('#quadrimestre').prop('disabled', false);
+            $('#datepicker').prop('disabled', false);
+        }
+    });
+
+    $("#todos").change(function () {
+        if ($('#todos').is(':checked') == true) {
+            $('#indic1').prop('checked', true);
+            $('#indic2').prop('checked', true);
+            $('#indic3').prop('checked', true);
+            $('#indic4').prop('checked', true);
+            $('#indic5').prop('checked', true);
+            $('#indic6').prop('checked', true);
+            $('#indic7').prop('checked', true);
+        } else {
+            $('#indic1').prop('checked', false);
+            $('#indic2').prop('checked', false);
+            $('#indic3').prop('checked', false);
+            $('#indic4').prop('checked', false);
+            $('#indic5').prop('checked', false);
+            $('#indic6').prop('checked', false);
+            $('#indic7').prop('checked', false);
+        }
+    })
 
 
 </script>

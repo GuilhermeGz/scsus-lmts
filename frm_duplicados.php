@@ -25,10 +25,10 @@ if (file_exists("config/c_rel_du_".$_SESSION['key'].".php")){
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Duplicados</h1>
+          <div class="col-sm-8">
+              <h1>Dados para geração dos relatórios</h1>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item active">Duplicados</li>
             </ol>
@@ -46,7 +46,7 @@ if (file_exists("config/c_rel_du_".$_SESSION['key'].".php")){
           <div class="col-md-12">
             <!-- general form elements -->
             <div class="card card-primary">
-              <div class="card-header">
+                <div class="card-header" style="background-color: #0c5460; color: white">
                 <h3 class="card-title">Geral</h3>
               </div>
               <!-- /.card-header -->

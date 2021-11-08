@@ -25,11 +25,11 @@ if (file_exists("config/banco_".$_SESSION['key'].".php")){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Banco de dados</h1>
+            <h1>Conectar a Base de Dados</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item active">Banco de dados</li>
+              <li class="breadcrumb-item active">Base de Dados</li>
             </ol>
           </div>
         </div>
@@ -44,8 +44,8 @@ if (file_exists("config/banco_".$_SESSION['key'].".php")){
           <div class="col-md-12">
             <!-- jquery validation -->
             <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Banco de dados <small>- dados para conexão</small></h3>
+              <div class="card-header" style="background-color: #0c5460; color: white">
+                <h3 class="card-title">Banco de dados</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
