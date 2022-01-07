@@ -38,44 +38,96 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link" onclick="$('#config-body').load('frm_mulheres.php');return false;">
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_mulheres.php');return false;">
                                 <i class="fas fa-female"></i>
-                                    Mulheres
+                                Mulheres
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link" onclick="$('#config-body').load('frm_vacinas.php');return false;">
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_vacinas.php');return false;">
                                 <i class="nav-icon fas fa-flask"></i>
-                                    Vacinas
+                                Vacinas
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link" onclick="$('#config-body').load('frm_hipertensos.php');return false;">
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_hipertensos.php');return false;">
                                 <i class="nav-icon fas fa-heartbeat"></i>
-                                    Hipertensos
+                                Hipertensos
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link" onclick="$('#config-body').load('frm_diabeticos.php');return false;">
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_diabeticos.php');return false;">
                                 <i class="nav-icon fas fa-tint"></i>
-                                    Diabéticos
+                                Diabéticos
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link" onclick="$('#config-body').load('frm_duplicados.php');return false;">
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_duplicados.php');return false;">
                                 <i class="nav-icon fas fa-people-arrows"></i>
-                                    Duplicados
+                                Duplicados
                             </a>
                         </li>
                     </ul>
                 </li>
             </ul>
 
+            <ul id="myUL" style="margin-left: 17px">
+                <li>
+                    <span class="caret" style="font-size: large"> <a href="#"><i class="fas fa-filter nav-icon"></i> Filtros</a></span>
+                    <ul class="nested">
+                        <li>
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_filtro.php?ap=rel_gestantes');return false;">
+                                <i class="fas fa-baby-carriage"></i>
+                                Gestantes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_filtro.php?ap=rel_mulheres');return false;">
+                                <i class="fas fa-female"></i>
+                                Mulheres
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_filtro.php?ap=rel_mexames');return false;">
+                                <i class="nav-icon fas fa-flask"></i>
+                                Exames
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_filtro.php?ap=rel_vacinas');return false;">
+                                <i class="nav-icon fas fa-flask"></i>
+                                Vacinas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_filtro.php?ap=rel_hipertensos');return false;">
+                                <i class="nav-icon fas fa-heartbeat"></i>
+                                Hipertensos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link"
+                               onclick="$('#config-body').load('frm_filtro.php?ap=rel_diabeticos');return false;">
+                                <i class="nav-icon fas fa-tint"></i>
+                                Diabéticos
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div class="col-md-10" id="config-body">
-            <?php
-            include('frm_dados.php')
-            ?>
+            <div style="margin: 20%"><h2 style="margin-left: 30%">Configurações</h2></div>
         </div>
     </div>
 

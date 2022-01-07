@@ -19,6 +19,13 @@
             <div class="col-sm-12" id="" style="font-weight:bold; font-family:arial; color: white">
                 Parceria
             </div>
+
+            <div style="margin: 3px;">
+                <a href="https://garanhuns.pe.gov.br/" target="blank">
+                    <img style="height: 100px" src="dist/img/logo_secSaude.png">
+                </a>
+            </div>
+
             <div style="margin: 3px;">
                 <a href="http://ufape.edu.br/" target="blank">
                     <img style="height: 100px" src="dist/img/Logo_UFAPE_Preta_com_Lettering.png">
