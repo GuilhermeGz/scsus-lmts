@@ -13,7 +13,7 @@ $sb = isset($_GET["sb"]) ? trim($_GET["sb"]) : 0;
 $cb = isset($_GET["cb"]) ? trim($_GET["cb"]) : 0;
 $vb = isset($_GET["vb"]) ? trim($_GET["vb"]) : 0;
 
-$fhtml = $ap."_".$_SESSION['key'].".html";
+$fhtml = $ap."_".($_SESSION['key']+1).".html";
 $fphp = $ap.".php";
 if ($sb == 1){
 	$fphp .= "?sb=1&cb=".$cb."&vb=".$vb;
@@ -28,6 +28,9 @@ if ($sb == 1){
                         <h5 class="modal-title" id="loadingModal_label">
                             <span class="glyphicon glyphicon-refresh"></span>
                             Aguarde...
+                            <?php
+                            echo('fhtml: '.$fhtml . ', fphp:'. $fphp . ', sb:'. $sb . ', cb:'. $cb. ', vb:'. $vb);
+                            ?>
                         </h5>
                     </div>
                     <div class="modal-body">
@@ -64,7 +67,7 @@ if ($sb == 1){
                         $('#loadingModal_content').html('<br>Relatorio gerado com sucesso!');
 						resetModal();
 						
-						$('#main-rel').load('html/<?php echo $fhtml;?>');
+						$('#main-body').load('html/<?php echo $fhtml;?>');
                     })
                     .fail(function () {
                         $('#loader').removeClass('loader');

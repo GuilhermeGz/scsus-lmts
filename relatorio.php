@@ -59,7 +59,7 @@ $vacinas = "html/rel_criancas_" . $_SESSION['key'] . ".html";
             </tr>
             <tr>
                 <td>Dashboard</td>
-                <td>Indicador da Equipe</td>
+                <td>Indicador por Unidade</td>
                 <td>04/10/2021</td>
                 <td><a href="#" onclick="$('#main-body').load('dash_uni.php');return false;"
                        class="nav-link">

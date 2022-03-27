@@ -213,9 +213,9 @@ if (date('Ymd') > datasomadias($dtinstall, 5)) {
     include('navbar.php')
     ?>
 
-    <div class="row">
+    <div class="row" style="background-color: #eeeeee">
         <div class="col-md-1"></div>
-        <div class="col-md-10 p-3 my-3 bg-light" id="main-body">
+        <div class="col-md-10 py-5 my-3 bg-light" id="main-body" style="min-height: 70vh; border-radius: 10px">
             <?php
             if (strlen($ap) > 0) {
                 include($ap);

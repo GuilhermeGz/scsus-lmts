@@ -1,58 +1,41 @@
-<?php
-?>
-<div class="row justify-content-center" style="background-color: #323360; padding-bottom: 50px; width: 102%; margin-top: 3%">
-    <div class="col-sm-3" align="center">
-        <div class="row justify-content-center" style="margin-top:1.2rem;">
-            <div class="col-sm-12" id="" style="font-weight:bold; font-family:arial; color: white">
-                Desenvolvido por
-            </div>
-            <div style="margin:3px; margin-top:1.4rem;">
-                <a href="http://lmts.uag.ufrpe.br/" target="blank">
-                    <img src="dist/img/logo_lmts_colorido.png" style="height: 80px">
+<footer class="container-fluid pt-1 pb-3" style="background-color: white">
+    <div class="container-fluid px-lg-5">
+        <div class="row justify-content-between align-items-center my-2">
+            <div class="col-md-4 text-center py-1">
+                <a class="navbar-brand mx-3" href="">
+                    <img width="200px" src="dist/img/logo-esus01.png">
                 </a>
             </div>
 
-        </div>
-    </div>
-    <div class="col-sm-5" align="center">
-        <div class="row justify-content-center" style="margin-top:1.2rem;">
-            <div class="col-sm-12" id="" style="font-weight:bold; font-family:arial; color: white">
-                Parceria
+            <div class="col-md-4 text-center py-1">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <h6 style="color: #909090;">Desenvolvido por:</h6>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12" style="margin-bottom: 1rem;">
+                        <div class="row justify-content-center" >
+                            <div class="col-md-2">
+                                <a href="http://ufape.edu.br/" target="_blank"><img src="dist/img/logo_ufape_blue.png" alt="Logo" width="30px;" style="float: right"></a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="http://lmts.uag.ufrpe.br/" target="_blank"><img src="dist/img/logo_ufape_color.png" alt="Logo" width="160px;" style="border-left: 1px rgba(0, 0, 255, 0.274) solid; padding-left: 15px;"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div style="margin: 3px;">
-                <a href="https://garanhuns.pe.gov.br/" target="blank">
-                    <img style="height: 100px" src="dist/img/logo_secSaude.png">
-                </a>
-            </div>
-
-            <div style="margin: 3px;">
-                <a href="http://ufape.edu.br/" target="blank">
-                    <img style="height: 100px" src="dist/img/Logo_UFAPE_Preta_com_Lettering.png">
-                </a>
+            <div class="col-md-4 text-center pb-4">
+                <span class="textoRodape">Redes sociais do lmts</span>
+                <div class="row justify-content-center text-center">
+                    <a href="https://www.instagram.com/lmts_ufape/" target="_blank" class="col-md-1 p-0"> <img height="40" src="dist/img/Icon awesome-instagram.svg"></a>
+                    <a href="https://www.facebook.com/LMTSUFAPE/" target="_blank" class="col-md-1 p-0"> <img height="40" src="dist/img/Icon awesome-facebook.svg"></a>
+                    <a href="mailto:lmts@ufrpe.br" class="col-md-1 p-0"> <img height="40" src="dist/img/Icon zocial-email.svg"></a>
+                </div>
             </div>
         </div>
+        <hr class="m-0 p-0">
     </div>
-    <div class="col-sm-3" align="center">
-        <div class="row justify-content-center" style=" margin-top:1.2rem;">
-            <div class="col-sm-12" id="" style="font-weight:bold; font-family:arial; color: white">
-                Redes sociais
-            </div>
-            <div style="margin:3px;  margin-top:2.4rem;">
-                <a href="https://www.facebook.com/LMTSUFAPE" target="blank">
-                    <img style="height: 30px" src="dist/img/logo_facebook_preto.png">
-                </a>
-            </div>
-            <div style="margin:3px; margin-top:2.4rem;">
-                <a href="https://www.instagram.com/lmts_ufape/" target="blank">
-                    <img style="height: 30px" src="dist/img/logo_instagram_preto.png">
-                </a>
-            </div>
-            <div style="margin:3px; margin-top:2.4rem;">
-                <a href="https://twitter.com/lmtsufape" target="blank">
-                    <img style="height: 30px" src="dist/img/logo_twitter_preto.png">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+</footer>
