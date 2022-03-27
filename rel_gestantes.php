@@ -93,7 +93,7 @@ $HTML = fopen($file,'w');
 $file = "csv/gestantes_T_".$_SESSION['key'].".csv";
 if (file_exists($file)){unlink($file);}
 $FT = fopen($file,'w');
-$texto = "Seq;CPF;CNS;Nome;DtNascimento;Mae;Idade;MarcGestante;MarcHipertensa;MarcDiabetica;Interrupcao;InterCC;DUM;20s;DPP;FimPuerperio;NumConsultas;DtPrimConsulta;NumConsOdonto;Indicador1;Indicador2;Indicador3;Sexo;CNES;INE;MA;uuidFicha;uuidFichaOrigem;uuidDadoTransp\r\n";
+$texto = "Seq;CPF;CNS;Nome;DtNascimento;Mae;Idade;MarcGestante;MarcHipertensa;MarcDiabetica;Interrupcao;InterCC;DUM;12s;DPP;FimPuerperio;NumConsultas;DtPrimConsulta;NumConsOdonto;Indicador1;Indicador2;Indicador3;Sexo;CNES;INE;MA;uuidFicha;uuidFichaOrigem;uuidDadoTransp\r\n";
 fwrite($FT, $texto);
 // -----------------------------------------------------------------------
 $file = "csv/gestantes_C_".$_SESSION['key'].".csv";
@@ -293,7 +293,7 @@ CREATE TEMPORARY TABLE tmp_gestantes (
 	ine varchar(20),
 	nome_equipe varchar(255),
 	calc_ddp bigint,
-	calc_20s bigint,
+	calc_12s bigint,
 	calc_fimpuerp bigint,
 	nu_uuid_ficha varchar(92),
 	nu_uuid_ficha_origem varchar(92),
@@ -955,7 +955,7 @@ if ($nm_sql_1 > 0){
 				//   Tratamento dos dados
 				// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 				// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-				$calc_20s = datasomadias($result1['co_dim_tempo_dum'],140);
+				$calc_12s = datasomadias($result1['co_dim_tempo_dum'],84);
 				$calc_ddp = datasomadias($result1['co_dim_tempo_dum'],$dpp);
 				$calc_fimpuerp = datasomadias($result1['co_dim_tempo_dum'],336);
 				$data_nascimento = dataint($result1['dt_nascimento']); // ou dataint($cidadao_nascimento)
@@ -1019,7 +1019,7 @@ if ($nm_sql_1 > 0){
 					ine,
 					nome_equipe,
 					calc_ddp,
-					calc_20s,
+					calc_12s,
 					calc_fimpuerp,
 					nu_uuid_ficha,
 					nu_uuid_ficha_origem,
@@ -1051,7 +1051,7 @@ if ($nm_sql_1 > 0){
 					'".$ine."',
 					'".$nome_equipe."',
 					".$calc_ddp.",
-					".$calc_20s.",
+					".$calc_12s.",
 					".$calc_fimpuerp.",
 					'".$nu_uuid_ficha."',
 					'".$nu_uuid_ficha_origem."',
@@ -1810,7 +1810,7 @@ if ($nm_sql_2 > 0){
 				$array_consultas_data[$conta_array_consultas] = $consulta['co_dim_tempo'];
 				$conta_array_consultas++;
 			}
-			if ($dt_primeira_consulta <= $result2['calc_20s']){
+			if ($dt_primeira_consulta <= $result2['calc_12s']){
 				$I1_c2 = true;
 			}
 		}
@@ -2720,8 +2720,8 @@ if ($nm_sql_2 > 0){
 			<td colspan=\"2\" valign=\"top\" class=\"lista-dado2-centro-B\">".$marcado_diabetico."</td>
 			<td colspan=\"3\" valign=\"top\" class=\"lista-sub-dados-B\">DUM</td>
 			<td colspan=\"2\" valign=\"top\" class=\"lista-dado2-centro-B\"><b>".dtshow($result2['g_co_dim_tempo_dum'])."</b></td>
-			<td colspan=\"2\" valign=\"top\" class=\"lista-sub-dados-B\">20&ordf; Semana</td>
-			<td valign=\"top\" class=\"lista-dado2-centro-B\">".dtshow($result2['calc_20s'])."</td>
+			<td colspan=\"2\" valign=\"top\" class=\"lista-sub-dados-B\">12&ordf; Semana</td>
+			<td valign=\"top\" class=\"lista-dado2-centro-B\">".dtshow($result2['calc_12s'])."</td>
 		  </tr>
 		  <tr> 
 			<td height=\"18\"></td>
@@ -2782,7 +2782,7 @@ if ($nm_sql_2 > 0){
 		if (strlen($dt_primeira_consulta) < 8){
 			$dt_primeira_consulta = '00000000';
 		}
-		$texto = zesq($conta_geral,5).";".mcpf($rCPF).";".mcns($rCNS).";".str_replace("Ã","A",$result2['cidadao_nome']).";".dtshow($result2['data_nascimento']).";".str_replace("Ã","A",$result2['cidadao_mae']).";".$idade.";".str_replace("Ã","A",$marcado_gestante).";".str_replace("Ã","A",$marcado_hipertenso).";".str_replace("Ã","A",$marcado_diabetico).";".str_replace("Ã","A",$interrup_show).";".$inter_cidciap.";".dtshow($result2['g_co_dim_tempo_dum']).";".dtshow($result2['calc_20s']).";".dtshow($result2['calc_ddp']).";".dtshow($result2['calc_fimpuerp']).";".$total_consultas.";".dtshow($dt_primeira_consulta).";".$num_codontos.";".str_replace("Ã","A",$indicador1).";".str_replace("Ã","A",$show_indicador_2).";".str_replace("Ã","A",$consulta_odontologica).";".$result2['cidadao_sexo'].";".$result2['cnes'].";".$result2['ine'].";".$ma_familiar."/".$result2['cind_micro_area'].";".$result2['nu_uuid_ficha'].";".$result2['nu_uuid_ficha_origem'].";".$result2['nu_uuid_dado_transp']."\r\n";
+		$texto = zesq($conta_geral,5).";".mcpf($rCPF).";".mcns($rCNS).";".str_replace("Ã","A",$result2['cidadao_nome']).";".dtshow($result2['data_nascimento']).";".str_replace("Ã","A",$result2['cidadao_mae']).";".$idade.";".str_replace("Ã","A",$marcado_gestante).";".str_replace("Ã","A",$marcado_hipertenso).";".str_replace("Ã","A",$marcado_diabetico).";".str_replace("Ã","A",$interrup_show).";".$inter_cidciap.";".dtshow($result2['g_co_dim_tempo_dum']).";".dtshow($result2['calc_12s']).";".dtshow($result2['calc_ddp']).";".dtshow($result2['calc_fimpuerp']).";".$total_consultas.";".dtshow($dt_primeira_consulta).";".$num_codontos.";".str_replace("Ã","A",$indicador1).";".str_replace("Ã","A",$show_indicador_2).";".str_replace("Ã","A",$consulta_odontologica).";".$result2['cidadao_sexo'].";".$result2['cnes'].";".$result2['ine'].";".$ma_familiar."/".$result2['cind_micro_area'].";".$result2['nu_uuid_ficha'].";".$result2['nu_uuid_ficha_origem'].";".$result2['nu_uuid_dado_transp']."\r\n";
 		fwrite($FT, $texto);
 		// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
