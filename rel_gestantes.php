@@ -93,7 +93,7 @@ $HTML = fopen($file,'w');
 $file = "csv/gestantes_T_".$_SESSION['key'].".csv";
 if (file_exists($file)){unlink($file);}
 $FT = fopen($file,'w');
-$texto = "Seq;CPF;CNS;Nome;DtNascimento;Mae;Idade;MarcGestante;MarcHipertensa;MarcDiabetica;Interrupcao;InterCC;DUM;20s;DPP;FimPuerperio;NumConsultas;DtPrimConsulta;NumConsOdonto;Indicador1;Indicador2;Indicador3;Sexo;CNES;INE;MA;uuidFicha;uuidFichaOrigem;uuidDadoTransp\r\n";
+$texto = "Seq;CPF;CNS;Nome;DtNascimento;Mae;Idade;MarcGestante;MarcHipertensa;MarcDiabetica;Interrupcao;InterCC;DUM;12s;DPP;FimPuerperio;NumConsultas;DtPrimConsulta;NumConsOdonto;Indicador1;Indicador2;Indicador3;Sexo;CNES;INE;MA;uuidFicha;uuidFichaOrigem;uuidDadoTransp\r\n";
 fwrite($FT, $texto);
 // -----------------------------------------------------------------------
 $file = "csv/gestantes_C_".$_SESSION['key'].".csv";
@@ -2778,6 +2778,7 @@ if ($nm_sql_2 > 0){
 			<td></td>
 			<td colspan=\"2\" valign=\"top\" class=\"indicador-cx-B\">".$marcado_gestante_odonto_show."</td>
 		  </tr>";
+		fwrite($HTML, $rel_dados_unitario);
 		fwrite($HTML, $rel_dados_unitario);
 		if (strlen($dt_primeira_consulta) < 8){
 			$dt_primeira_consulta = '00000000';

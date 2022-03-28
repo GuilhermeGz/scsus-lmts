@@ -41,15 +41,6 @@ $vacinas = "html/rel_criancas_" . $_SESSION['key'] . ".html";
             <tbody>
             <tr>
                 <td>Dashboard</td>
-                <td>Indicador Geral</td>
-                <td>04/10/2021</td>
-                <td><a href="#" onclick="$('#main-body').load('dash_ind.php');return false;"
-                       class="nav-link">
-                        <i class="fas fa-chart-bar nav-icon"></i>
-                    </a></td>
-            </tr>
-            <tr>
-                <td>Dashboard</td>
                 <td>Indicador da Equipe</td>
                 <td>04/10/2021</td>
                 <td><a href="#" onclick="$('#main-body').load('dash_equ.php');return false;"

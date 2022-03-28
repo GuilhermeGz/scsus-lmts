@@ -16,7 +16,7 @@ include('header.php')
 
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="#" onclick="$('#main-body').load('dash_pat.php')" style="margin-left: -15%">
+        <a class="navbar-brand" href="#" onclick="$('#main-body').load('dash_ind.php')" style="margin-left: -15%">
             <img src="dist/img/atencao_basica.png" width="40px" height="40px">
             <small><b>Indicadores</b></small>
         </a>
@@ -35,7 +35,7 @@ include('header.php')
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="$('#main-body').load('dash_pat.php');return false;">Inicio</a>
+                    <a class="nav-link" href="#" onclick="$('#main-body').load('dash_ind.php');return false;">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" onclick="$('#main-body').load('relatorio.php');return false;">Relatório</a>

@@ -13,6 +13,7 @@ require_once("config/dados_" . $_SESSION['key'] . ".php");
 $dash_ind1 = "";
 $graf_ind1 = "";
 $tab_ind1 = "";
+
 if (file_exists("resumo/r_ind1_" . $_SESSION['key'] . ".php")) {
     require_once("resumo/r_ind1_" . $_SESSION['key'] . ".php");
     $cor1 = "bg-danger";
@@ -30,8 +31,18 @@ if (file_exists("resumo/r_ind1_" . $_SESSION['key'] . ".php")) {
         $cor11 = "#17A2B8"; // azul
     }
     $dash_ind1 = "	
-          <div class=\"col-md-3\" style='margin-bottom: 10px'>
-            <div class=\"info-box " . $cor1 . "\">
+	<style>
+	    .progress{
+	        margin: auto;
+	        width: 95%;
+	    }
+	    p{
+	    margin: auto;
+	    width: 90%;
+	    }
+    </style>
+          <div class=\"col-md-3 mb-2\" >
+            <div class=\"info-box " . $cor1 . "\" style='min-height: 235px; border-radius: 10px'>
             <center>
               <span class=\"info-box-icon\"><i class=\"fas fa-baby-carriage\"></i></span>
               </center>
@@ -162,8 +173,8 @@ if (file_exists("resumo/r_ind2_" . $_SESSION['key'] . ".php")) {
         $cor22 = "#17A2B8";
     }
     $dash_ind2 = "	
-          <div class=\"col-md-3\" style='margin-bottom: 10px'>
-            <div class=\"info-box " . $cor2 . "\">
+          <div class=\"col-md-3 mb-2\" >
+            <div class=\"info-box " . $cor2 . "\" style='min-height: 235px; border-radius: 10px'>
             <center>
               <span class=\"info-box-icon\"><i class=\"fas fa-baby-carriage\"></i></span>
               </center>
@@ -296,8 +307,8 @@ if (file_exists("resumo/r_ind3_" . $_SESSION['key'] . ".php")) {
         $cor33 = "#17A2B8";
     }
     $dash_ind3 = "	
-          <div class=\"col-md-3\" style='margin-bottom: 10px'>
-            <div class=\"info-box " . $cor3 . "\">
+          <div class=\"col-md-3 mb-2\" >
+            <div class=\"info-box " . $cor3 . "\" style='min-height: 235px; border-radius: 10px'>
             <center>
               <span class=\"info-box-icon\"><i class=\"fas fa-baby-carriage\"></i></span>
               </center>
@@ -423,8 +434,8 @@ if (file_exists("resumo/r_ind4_" . $_SESSION['key'] . ".php")) {
         $cor44 = "#17A2B8";
     }
     $dash_ind4 = "	
-          <div class=\"col-md-3\" style='margin-bottom: 10px'>
-            <div class=\"info-box " . $cor4 . "\">
+          <div class=\"col-md-3 mb-2\" >
+            <div class=\"info-box " . $cor4 . "\" style='min-height: 235px; border-radius: 10px'>
             <center>
               <span class=\"info-box-icon\"><i class=\"fas fa-female\"></i></span>
               </center>
@@ -552,8 +563,8 @@ if (file_exists("resumo/r_ind5_" . $_SESSION['key'] . ".php")) {
         $cor55 = "#17A2B8";
     }
     $dash_ind5 = "	
-          <div class=\"col-md-3\" style='margin-bottom: 10px'>
-            <div class=\"info-box " . $cor5 . "\">
+          <div class=\"col-md-3 mb-2\" >
+            <div class=\"info-box " . $cor5 . "\" style='min-height: 235px; border-radius: 10px'>
             <center>
               <span class=\"info-box-icon\"><i class=\"fas fa-flask\"></i></span>
               </center>
@@ -681,8 +692,8 @@ if (file_exists("resumo/r_ind6_" . $_SESSION['key'] . ".php")) {
         $cor66 = "#17A2B8";
     }
     $dash_ind6 = "	
-          <div class=\"col-md-3\">
-            <div class=\"info-box " . $cor6 . "\">
+          <div class=\"col-md-3 mb-2\">
+            <div class=\"info-box " . $cor6 . "\" style='min-height: 235px; border-radius: 10px'>
             <center>
               <span class=\"info-box-icon\"><i class=\"fas fa-heartbeat\"></i></span>
               </center>
@@ -806,8 +817,8 @@ if (file_exists("resumo/r_ind7_" . $_SESSION['key'] . ".php")) {
         $cor77 = "#17A2B8";
     }
     $dash_ind7 = "	
-          <div class=\"col-md-3\" style='margin-bottom: 10px;'>
-            <div class=\"info-box " . $cor7 . "\">
+          <div class=\"col-md-3 mb-2\" >
+            <div class=\"info-box " . $cor7 . "\" style='min-height: 235px; border-radius: 10px'>
             <center>
               <span class=\"info-box-icon\"><i class=\"fas fa-tint\"></i></span>
               </center>
@@ -921,14 +932,9 @@ if (file_exists("resumo/r_ind7_" . $_SESSION['key'] . ".php")) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Informações gerais</h1> <?php echo $cbend4; ?>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item active">Geral</li>
-                    </ol>
+            <div class="row mb-4">
+                <div class="col-sm-12 text-center">
+                    <h1>Indicadores Previne Brasil</h1> <?php echo $cbend4; ?>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -943,12 +949,12 @@ if (file_exists("resumo/r_ind7_" . $_SESSION['key'] . ".php")) {
                 <?php echo $dash_ind3; ?>
                 <?php echo $dash_ind4; ?>
             </div>
-            <div class="row">
+            <div class="row mb-4">
                 <?php echo $dash_ind5; ?>
                 <?php echo $dash_ind6; ?>
                 <?php echo $dash_ind7; ?>
             </div>
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
@@ -988,10 +994,6 @@ if (file_exists("resumo/r_ind7_" . $_SESSION['key'] . ".php")) {
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-
-    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
-        <i class="fas fa-chevron-up"></i>
-    </a>
 </div>
 <!-- /.content-wrapper -->
 <script>

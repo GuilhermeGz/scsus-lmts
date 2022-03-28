@@ -28,9 +28,6 @@ if ($sb == 1){
                         <h5 class="modal-title" id="loadingModal_label">
                             <span class="glyphicon glyphicon-refresh"></span>
                             Aguarde...
-                            <?php
-                            echo('fhtml: '.$fhtml . ', fphp:'. $fphp . ', sb:'. $sb . ', cb:'. $cb. ', vb:'. $vb);
-                            ?>
                         </h5>
                     </div>
                     <div class="modal-body">
@@ -67,7 +64,7 @@ if ($sb == 1){
                         $('#loadingModal_content').html('<br>Relatorio gerado com sucesso!');
 						resetModal();
 						
-						$('#main-body').load('html/<?php echo $fhtml;?>');
+						$('#main-rel').load('html/<?php echo $fhtml;?>');
                     })
                     .fail(function () {
                         $('#loader').removeClass('loader');
