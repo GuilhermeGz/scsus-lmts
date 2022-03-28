@@ -77,26 +77,26 @@ if (!file_exists("config/users.php")) {
 <?php
 include('header.php');
 ?>
-<div class="content">
+<div class="content pb-5 bg-gray-light">
     <div>
         <img class="center" src="dist/img/bg-header.png" width="100%" height="200px"
              style="margin-top: -25px; margin-bottom: 0px">
         <img class="center" src="dist/img/prefeitura2.png" width="50%" height="160px"
-             style="margin-top: -140px; margin-left: auto">
+             style="margin-top: -155px; margin-left: auto">
     </div>
 
-    <div class="container-fluid" style="width: 55%; height: 500px; background-color: white; margin-top: 20px;padding: 0 20px 20px 0; border-radius: 15px;
+    <div class="container-fluid bg-light" style="width: 55%; height: 500px; margin-top: 20px;padding: 0 20px 20px 0; border-radius: 15px;
 overflow: hidden; box-shadow: -1px 4px 17px -5px rgba(0,0,0,0.64);
 -webkit-box-shadow: -1px 4px 17px -5px rgba(0,0,0,0.64);
 -moz-box-shadow: -1px 4px 17px -5px rgba(0,0,0,0.64);">
         <div class="container-fluid">
             <div class="row" style="padding: 0px">
-                <div class="col-sm-8 " style="margin-right: 30px; margin-left: 0px; padding: 0px;">
+                <div class="col-sm-8 " style="margin-left: 0px; padding: 0px;">
                     <div style="margin-left: 30px; margin-right: 30px;">
-                        <img class="center" src="dist/img/atencao_basica.png" width="160px" height="160px"
+                        <img class="center" src="dist/img/previne.png" width="300px"
                              style="margin-top: 15%; margin-bottom: 10px">
                         <h3 style="text-align: center; font-family: 'Arial'; font-size: 23px; font-weight: bolder;margin-bottom: 30px">
-                            INDICADORES</h3>
+                            </h3>
                         <h4 style="text-align: center; color: grey">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit.
                             Sed sodales, nisi non pharetra gravida, risus nisl fringilla
@@ -104,7 +104,7 @@ overflow: hidden; box-shadow: -1px 4px 17px -5px rgba(0,0,0,0.64);
                             tristique leo, id interdum ex sagittis sed.</h4>
                     </div>
                 </div>
-                <div class="col-sm-4" style="margin-right: -100px; ">
+                <div class="col-sm-4">
                     <div style="margin-top: 60px; margin-bottom: 20px; text-align: center">
                         <h4 style="font-family: Arial"><b>Olá, Seja Bem Vindo(a)!</b></h4>
                     </div>

@@ -17,8 +17,7 @@ include('header.php')
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="#" onclick="$('#main-body').load('dash_ind.php')" style="margin-left: -15%">
-            <img src="dist/img/atencao_basica.png" width="40px" height="40px">
-            <small><b>Indicadores</b></small>
+            <img src="dist/img/previne.png" height="60px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
