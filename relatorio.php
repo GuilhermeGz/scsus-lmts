@@ -204,8 +204,8 @@ $vacinas = "html/rel_criancas_" . $_SESSION['key'] . ".html";
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <a href="#" onclick="$('#modalGerarRelatorio').modal('hide');$('#main-body').load('prep.php?ap=rel_gestantes');return false;"
-                           class="nav-link">
+                        <a href="#" id="indicador1" onclick="gerarIndicador1();return false;"
+                           class="nav-link" >
                             <i class="fas fa-chart-line nav-icon text-warning"></i>
                             Indicadores 1, 2 e 3 <small>[gerar]</small>
                         </a>
@@ -412,7 +412,7 @@ $vacinas = "html/rel_criancas_" . $_SESSION['key'] . ".html";
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Gerar</button>
+                <button type="button" class="btn btn-primary" onclick=" $('#modalGerarRelatorio').modal('hide');">Gerar</button>
             </div>
         </div>
     </div>
@@ -429,6 +429,11 @@ $vacinas = "html/rel_criancas_" . $_SESSION['key'] . ".html";
 </script>
 
 <script>
+
+    function gerarIndicador1(){
+        $('#modalGerarRelatorio').modal('hide');
+        setTimeout(() => {$('#main-body').load('prep.php?ap=rel_gestantes'); }, 500);
+    }
 
     $('#quadrAno').change(function () {
         if ($('#quadrAno').is(':checked') == true) {
