@@ -35,7 +35,7 @@ include('header.php')
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="$('#main-body').load('dash_pat.php');return false;">Inicio</a>
+                    <a class="nav-link" href="#" onclick="$('#main-body').load('dash_pat.php');return false;">Início</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" onclick="$('#main-body').load('relatorio.php');return false;">Relatório</a>

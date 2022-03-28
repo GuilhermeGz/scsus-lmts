@@ -67,7 +67,7 @@ if ($sb == 1){
                         $('#loadingModal_content').html('<br>Relatorio gerado com sucesso!');
 						resetModal();
 						
-						$('#main-body').load('html/<?php echo $fhtml;?>');
+						$('#main-rel').load('html/<?php echo $fhtml;?>');
                     })
                     .fail(function () {
                         $('#loader').removeClass('loader');
