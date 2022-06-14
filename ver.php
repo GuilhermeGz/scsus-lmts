@@ -10,7 +10,7 @@ require_once('session.php');
 
 $ap = isset($_GET["ap"]) ? trim($_GET["ap"]) : '';
 $fhtml = "html/".$ap."_".$_SESSION['key'].".html";
-$fhtml = "html/rel_gestantes_".($_SESSION['key']).".html";
+$fhtml = "html/rel_gestantes_".($_SESSION['key']+1).".html";
 
 $fcarregar = $fhtml;
 if (!file_exists($fhtml)){
