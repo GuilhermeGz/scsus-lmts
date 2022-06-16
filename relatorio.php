@@ -26,7 +26,10 @@ $vacinas = "html/rel_criancas_" . $_SESSION['key'] . ".html";
             </button>
         </div>
     </div>
-
+    <?php
+    require_once('connect.php');
+    echo ($cdb);
+    ?>
     <hr width="99%">
     <div class="row">
         <table class="table center shadow-sm p-3 mb-5 bg-white rounded" style="width: 96%;">
